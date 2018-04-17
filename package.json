@@ -1,0 +1,26 @@
+{
+  "name": "ski_free_2",
+  "version": "1.0.0",
+  "description": "## Summary",
+  "main": "webpack.config.js",
+  "scripts": {
+    "webpack": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/briemcnally/ski_free_2.git"
+  },
+  "keywords": [],
+  "author": "Brienne McNally",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/briemcnally/ski_free_2/issues"
+  },
+  "homepage": "https://github.com/briemcnally/ski_free_2#readme",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "webpack": "^3.4.1"
+  }
+}
