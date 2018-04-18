@@ -1,6 +1,10 @@
 h1 {
   display: block;
   text-align: center;
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 40px;
 }
 
 canvas {
@@ -8,4 +12,23 @@ canvas {
   display: block;
   margin: 0 auto;
   border: 1px solid black
+}
+
+main {
+  background-image: url(http://res.cloudinary.com/dzmnmgun1/image/upload/v1523934989/Screen_Shot_2018-04-16_at_8.16.06_PM.png);
+  min-height: 1000px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.header-nav{
+  background-color: blue;
+  height: 20px;
+  width: 800px;
+  display: block;
+  text-align: center;
+  color: white;
+  display: block;
+  margin: 0 auto;
+  border: 1px solid black
+
 }
