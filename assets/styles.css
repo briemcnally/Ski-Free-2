@@ -7,6 +7,10 @@ h1 {
   font-size: 40px;
 }
 
+body {
+  overflow: hidden;
+}
+
 canvas {
   background: #fff;
   display: block;
@@ -30,5 +34,27 @@ main {
   display: block;
   margin: 0 auto;
   border: 1px solid black
+}
 
+#modal {
+    position: fixed;
+    font-family: 'Raleway', sans-serif;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    height: 100%;
+    width: 100%;
+    /* text-align: center; */
+}
+.modal-content {
+  position: absolute;
+  background-color: white;
+  padding: 20px;
+  border: 1px solid black;
+  display: block;
+  float: left;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -50%);
 }
