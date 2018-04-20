@@ -18,6 +18,13 @@ canvas {
   border: 1px solid black
 }
 
+#audio{
+  display: block;
+  margin: 0 auto;
+  border: 1px solid black;
+  margin-top: 20px;
+}
+
 button{
   font-family: 'Raleway', sans-serif;
   font-size: 16px;
