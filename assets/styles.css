@@ -18,6 +18,11 @@ canvas {
   border: 1px solid black
 }
 
+button{
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+}
+
 main {
   background-image: url(http://res.cloudinary.com/dzmnmgun1/image/upload/v1523934989/Screen_Shot_2018-04-16_at_8.16.06_PM.png);
   min-height: 1000px;
@@ -59,6 +64,19 @@ main {
   width: 100%;
   display: none;
 }
+
+#game-won-modal{
+  position: fixed;
+  font-family: 'Raleway', sans-serif;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 99999;
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+
 .modal-content {
   position: absolute;
   background-color: white;

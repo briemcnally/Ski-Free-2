@@ -235,7 +235,7 @@ function gameLoad() {
     checkBearCollision(avatar, bears);
     if (window.globalTimer > 50000) {
       clearInterval(interval);
-      alert('You Won');
+      playerWon();
     }
   }, INTERVAL);
 }
@@ -257,6 +257,16 @@ function skierHitObject(cb) {
   };
 }
 
+function playerWon(cb) {
+  document.getElementById('game-won-modal').style.display = "block";
+  clearInterval(interval);
+  document.getElementById('restart-button').onclick = function () {
+    document.getElementById('game-won-modal').style.display = "none";
+    location.reload();
+    gameLoad();
+  };
+}
+
 function checkTreeCollision(skier, trees) {
   var numTrees = trees.length;
   for (var i = 0; i < numTrees; i++) {
@@ -271,7 +281,7 @@ function checkRockCollision(skier, rocks) {
   var numRocks = rocks.length;
   for (var i = 0; i < numRocks; i++) {
     var rock = rockManager.rocks[i];
-    if (skier.x <= rock.x + 30 && skier.x + 30 >= rock.x && skier.y < rock.y + 50 && skier.y + 30 > rock.y) {
+    if (skier.x < rock.x + 40 && skier.x + 50 > rock.x && skier.y < rock.y + 30 && skier.y + 50 > rock.y) {
       skierHitObject();
     }
   }
@@ -281,7 +291,7 @@ function checkBearCollision(skier, bears) {
   var numBears = bears.length;
   for (var i = 0; i < numBears; i++) {
     var bear = rockManager.rocks[i];
-    if (skier.x < bear.x + 40 && skier.x + 40 > bear.x && skier.y < bear.y + 40 && skier.y + 40 > bear.y) {
+    if (skier.x < bear.x + 40 && skier.x + 50 > bear.x && skier.y < bear.y + 40 && skier.y + 50 > bear.y) {
       skierHitObject();
     }
   }
