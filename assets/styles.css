@@ -7,6 +7,10 @@ h1 {
   font-size: 40px;
 }
 
+h2 {
+  text-align: center;
+}
+
 body {
   overflow: hidden;
 }
@@ -28,6 +32,26 @@ canvas {
 button{
   font-family: 'Raleway', sans-serif;
   font-size: 16px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  margin-left: 35%;
+}
+
+#button{
+  margin-left: 35%;
+}
+
+#restart-button{
+  margin-left: 20%;
+}
+
+#replay-button{
+  margin-left: 25%;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 main {

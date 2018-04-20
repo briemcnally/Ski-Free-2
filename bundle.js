@@ -262,7 +262,7 @@ function skierHitObject(cb) {
 function playerWon(cb) {
   document.getElementById('game-won-modal').style.display = "block";
   clearInterval(interval);
-  document.getElementById('restart-button').onclick = function () {
+  document.getElementById('replay-button').onclick = function () {
     document.getElementById('game-won-modal').style.display = "none";
     location.reload();
     gameLoad();
