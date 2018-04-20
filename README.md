@@ -7,21 +7,21 @@ Ski Free two is a browser game inspired by the 1990s Microsoft game. The object 
 
 ## Functionality & MVP
 In Ski Free 2 players will be able to:
-
-- [ ] Start, pause, and restart the game
 - [ ] Control the skier with keyboard commands
-- [ ] Choose skier from list of different graphic skiers
+- [ ] Collide into obstacles including: trees, rocks, and bears
+- [ ] Listen to music while skiing
 
 Other features will include:
 - [ ] Clean styling with visual updates from the original 1990s game
-- [ ] Music and collision sound effects
+- [ ] Music
 - [ ] Instructions on how to play
+- [ ]
 
 
 ## Wireframes
 This game will be a single screen game. It will include details about how to play, as well as start/pause buttons, and mute button.
 
-![alt-text](https://i.imgur.com/8y6M43U.png)
+![alt-text](https://i.imgur.com/9kfZ1A1.gif)
 
 ## Architecture & Technologies
 This project will be implemented with the following technologies:
@@ -30,10 +30,13 @@ This project will be implemented with the following technologies:
 * Webpack to bundle and serve up various scripts
 
 Architecture:
-* `app.js`: Entry file
-* `game.js`: This script will house the primary logic for the game including functions for rendering, starting, stopping and pausing the game.
+* `game.js`: Entry file. This script will house the primary logic for the game including functions for rendering, starting, stopping and pausing the game.
 * `player.js`: This script manages the logic for the player
 * `monster.js`: This script will handle details for handling the logic and rending of the snow monster
+* `rock.js`: This script manages the creation of a rock object
+* `rock_manager.js`: This script manages the placement of rocks on the animation frame
+* `tree.js`: This script manages the creation of a tree object
+* `tree_manager.js`: This script manages the placement of trees on the animation frame and contains logic for increased forest density as game progresses
 
 ## Implementation Timeline
 
