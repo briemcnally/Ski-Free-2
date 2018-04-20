@@ -273,7 +273,7 @@ function checkTreeCollision(skier, trees) {
   var numTrees = trees.length;
   for (var i = 0; i < numTrees; i++) {
     var tree = treeManager.trees[i];
-    if (skier.x < tree.x + 20 && skier.x + 20 > tree.x && skier.y < tree.y + 40 && skier.y + 30 > tree.y) {
+    if (skier.x < tree.x + 20 && skier.x + 20 > tree.x && skier.y < tree.y + 40 && skier.y + 40 > tree.y) {
       skierHitObject();
     }
   }
