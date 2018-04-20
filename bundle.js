@@ -209,8 +209,8 @@ var interval = void 0;
 function gameLoad() {
   var canvas = document.getElementById("canvas");
   var ctx = canvas.getContext("2d");
-  var audio = document.getElementById("audio");
-  audio.play();
+  // const audio = document.getElementById("audio");
+  // audio.play();
 
   avatar = new Avatar({ canvas: canvas, ctx: ctx });
   treeManager = new TreeManager();
