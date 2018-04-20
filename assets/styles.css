@@ -47,6 +47,18 @@ main {
     width: 100%;
     /* text-align: center; */
 }
+
+#game-over-modal {
+  position: fixed;
+  font-family: 'Raleway', sans-serif;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 99999;
+  height: 100%;
+  width: 100%;
+  display: none;
+}
 .modal-content {
   position: absolute;
   background-color: white;
