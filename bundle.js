@@ -94,16 +94,13 @@ function TreeManager(options) {
     var tree = new Tree(currentTime);
     tree.x = Math.random() * W;
     tree.y = H;
-    // console.log("Spawned tree");
     this.trees.push(tree);
   };
 }
 
 TreeManager.prototype.update = function (timeElapsed, currentTime) {
   TIMER += timeElapsed;
-  // console.log(LEVEL_TIMER);
   this.treeTimer += timeElapsed;
-  // console.log(this.treeTimer);
   if (this.treeTimer > this.TREE_FREQUENCY) {
     this.placeTree(currentTime);
     this.treeTimer = 0;
@@ -136,13 +133,6 @@ TreeManager.prototype.update = function (timeElapsed, currentTime) {
   if (window.globalTimer > 34000) {
     this.TREE_FREQUENCY = 100;
   }
-
-  // if (window.globalTimer > 40000){
-  //   this.TREE_FREQUENCY = 80;
-  // }
-
-  // console.log(this.TREE_FREQUENCY);
-  // console.log(window.globalTimer);
 
   for (var i = 0; i < this.trees.length; i++) {
     var tree = this.trees[i];
@@ -257,16 +247,11 @@ window.onload = function modal(cb) {
   };
 };
 
-// window.stop();
-
-
-//clear interval
 function skierHitObject(cb) {
   document.getElementById('game-over-modal').style.display = "block";
   clearInterval(interval);
   document.getElementById('restart-button').onclick = function () {
     document.getElementById('game-over-modal').style.display = "none";
-    // alert('hello');
     location.reload();
     gameLoad();
   };
@@ -277,8 +262,6 @@ function checkTreeCollision(skier, trees) {
   for (var i = 0; i < numTrees; i++) {
     var tree = treeManager.trees[i];
     if (skier.x < tree.x + 20 && skier.x + 20 > tree.x && skier.y < tree.y + 40 && skier.y + 30 > tree.y) {
-      // setTimeout(function(){ alert('Game Over');}, 5);
-      // location.reload();
       skierHitObject();
     }
   }
@@ -372,7 +355,6 @@ Avatar.prototype.draw = function (context) {
 };
 
 Avatar.prototype.update = function (timeElapsed, currentTime) {
-  // treeManager.update(timeElapsed, currentTime);
   if (key.isPressed(RIGHT)) {
     this.x += this.vx;
     this.facing = "right";
@@ -389,26 +371,8 @@ Avatar.prototype.update = function (timeElapsed, currentTime) {
     this.y += this.vy;
     this.facing = "down";
   }
-  // console.log(globalTimer);
   window.globalTimer += timeElapsed;
 };
-
-// function checkCollision(avatar, trees){
-//   debugger
-//   const numTrees = TreeManager.trees.length;
-//   for (var i = 0; i < numTrees; i++) {
-//     const tree = treeManager.trees[i];
-//     if ((this.x + 80 > tree.x && this.x < tree.y + 90) &&
-//         (this.y + 80 > tree.y && this.y < tree.y + 90)){
-//           this.skierHitTree(this, tree);
-//       }
-//   }
-// };
-//
-// Avatar.prototype.skierHitTree = function(skier, tree){
-//   skier.x -= 50;
-// };
-
 
 module.exports = Avatar;
 
@@ -462,7 +426,6 @@ function RockManager(options) {
     var rock = new Rock(currentTime);
     rock.x = Math.random() * W;
     rock.y = H;
-    // console.log("Spawned rock");
     this.rocks.push(rock);
   };
 }
