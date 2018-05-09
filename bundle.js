@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -182,10 +182,31 @@ module.exports = Tree;
 "use strict";
 
 
-var Avatar = __webpack_require__(3);
+function Rock(startTime) {
+  this.x = 0;
+  this.y = 0;
+  this.image = new Image();
+  this.image.src = "./assets/rock.png";
+  this.startTime = startTime;
+  this.draw = function (canvas, timeElapsed, currentTime) {
+    var ctx = canvas.getContext("2d");
+    ctx.drawImage(this.image, this.x, this.y, 40, 30);
+  };
+}
+
+module.exports = Rock;
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var Avatar = __webpack_require__(4);
 var Tree = __webpack_require__(1);
 var TreeManager = __webpack_require__(0);
-var Rock = __webpack_require__(4);
+var Rock = __webpack_require__(2);
 var RockManager = __webpack_require__(5);
 var MonsterMovement = __webpack_require__(6);
 
@@ -317,7 +338,7 @@ function clearCanvas(canvas) {
 }
 
 /***/ }),
-/* 3 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -389,34 +410,13 @@ Avatar.prototype.update = function (timeElapsed, currentTime) {
 module.exports = Avatar;
 
 /***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-function Rock(startTime) {
-  this.x = 0;
-  this.y = 0;
-  this.image = new Image();
-  this.image.src = "./assets/rock.png";
-  this.startTime = startTime;
-  this.draw = function (canvas, timeElapsed, currentTime) {
-    var ctx = canvas.getContext("2d");
-    ctx.drawImage(this.image, this.x, this.y, 40, 30);
-  };
-}
-
-module.exports = Rock;
-
-/***/ }),
 /* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var Rock = __webpack_require__(4);
+var Rock = __webpack_require__(2);
 
 var previousTime = 0,
     INTERVAL = 30,
