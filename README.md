@@ -1,5 +1,5 @@
 # Ski Free 2
-[Play Here!]( https://briemcnally.github.io/ski_free_2/)
+[Play Here!](https://briemcnally.github.io/Ski-Free-2/)
 ## Summary
 
 Ski Free two is a browser game inspired by the 1990s Microsoft game. The object of the game is for the player to control the skier and avoid obstacles on the mountain. The obstacles include rocks, trees, and an Admominable Snow Monster that chases the skier after each run. In the original game there are three modes: slolam, free style, and tree slalom. For the purposes of this project this game will only have the tree slolam mode.
